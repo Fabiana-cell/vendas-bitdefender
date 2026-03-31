@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infraestrutura de TI e Cibersegurança - Soluções Bitdefender</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .neon-green {
+            color: #10b981;
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+            transform: scale(1.05);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border-color: rgba(16, 185, 129, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+            margin: 60px 0;
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .animated-bg {
+            background: linear-gradient(-45deg, #1e3a8a, #0f172a, #1e3a8a, #0f172a);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .pulse-border {
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            animation: pulse-animation 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-animation {
+            0%, 100% {
+                border-color: rgba(16, 185, 129, 0.3);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+            50% {
+                border-color: rgba(16, 185, 129, 0.6);
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+        }
+
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="animated-bg">
+    <!-- Navbar -->
+    <nav class="glass-effect sticky top-0 z-50 border-b border-blue-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold gradient-text">TI Solutions</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#bitdefender" class="hover:text-blue-400 transition">Segurança</a>
+                    <a href="#hardware" class="hover:text-blue-400 transition">Hardware</a>
+                    <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
+                    <a href="#contato" class="cta-button px-6 py-2 rounded-lg text-white font-semibold">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-20 pb-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-fade visible">
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        <span class="gradient-text">Infraestrutura de TI Inabalável</span>
+                        <br>
+                        <span class="text-white">e Cibersegurança de</span>
+                        <br>
+                        <span class="neon-green">Próxima Geração</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Proteja seu negócio com soluções enterprise de segurança, infraestrutura robusta e serviços cloud gerenciados. Confiado por empresas líderes no Brasil.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contato" class="cta-button px-8 py-4 rounded-lg text-white font-bold text-lg inline-block text-center">
+                            <i class="fas fa-phone mr-2"></i>Falar com Especialista
+                        </a>
+                        <button class="px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-400 font-bold hover:bg-blue-500/10 transition">
+                            <i class="fas fa-play-circle mr-2"></i>Ver Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="scroll-fade visible">
+                    <div class="relative">
+                        <div class="pulse-border rounded-2xl p-8 bg-gradient-to-br from-blue-900/20 to-emerald-900/20">
+                            <i class="fas fa-server text-6xl text-blue-400 mb-4"></i>
+                            <p class="text-gray-300 text-lg">Segurança em Tempo Real</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Bitdefender Section -->
+    <section id="bitdefender" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Proteção Bitdefender GravityZone</span>
+                </h2>
+                <p class="text-xl text-gray-400">Defesa contra Ransomware e Ameaças Avançadas</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-lock text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Proteção Ransomware</h3>
+                    <p class="text-gray-300 mb-6">
+                        Detecção e bloqueio em tempo real de ataques ransomware com tecnologia comportamental avançada.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Análise comportamental</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Isolamento automático</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Recuperação de dados</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-sliders-h text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Gestão Centralizada</h3>
+                    <p class="text-gray-300 mb-6">
+                        Console único para gerenciar toda sua infraestrutura de segurança com facilidade e eficiência.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Dashboard intuitivo</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Relatórios em tempo real</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Automação de políticas</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-globe text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Cobertura Global</h3>
+                    <p class="text-gray-300 mb-6">
+                        Proteção para endpoints, servidores e infraestrutura cloud em qualquer lugar do mundo.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Multi-plataforma</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Suporte 24/7</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Compliance garantido</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Hardware Section -->
+    <section id="hardware" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Infraestrutura de Hardware</span>
+                </h2>
+                <p class="text-xl text-gray-400">Soluções Consultivas de Servidores e Equipamentos</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <div class="space-y-6">
+                        <div class="feature-card rounded-lg p-6 hover-lift">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                <i class="fas fa-server text-blue-400 mr-3"></i>Servidores Enterprise
+                            </h3>
+                            <p class="text-gray-300">
+                                Servidores de alta performance com redundância e escalabilidade para suas operações críticas.
+                            </p>
+                        </div>
+
+                        <div class="feature-card rounded-lg p-6 hover-lift">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                <i class="fas fa-microchip text-blue-400 mr-3"></i>Equipamentos de Infraestrutura
+                            </h3>
+                            <p class="text-gray-300">
+                                Switches, roteadores, firewalls e storage de marcas líderes do mercado global.
+                            </p>
+                        </div>
+
+                        <div class="feature-card rounded-lg p-6 hover-lift">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                <i class="fas fa-box text-blue-400 mr-3"></i>Portfolio Completo
+                            </h3>
+                            <p class="text-gray-300">
+                                Acesso aos maiores distribuidores de TI do Brasil e do mundo com preços competitivos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="pulse-border rounded-2xl p-12 bg-gradient-to-br from-blue-900/20 to-emerald-900/20">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <i class="fas fa-network-wired text-4xl text-blue-400 mb-3"></i>
+                                <p class="text-sm font-semibold text-gray-300">Conectividade</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-database text-4xl text-emerald-400 mb-3"></i>
+                                <p class="text-sm font-semibold text-gray-300">Storage</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt text-4xl text-blue-400 mb-3"></i>
+                                <p class="text-sm font-semibold text-gray-300">Segurança</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-bolt text-4xl text-emerald-400 mb-3"></i>
+                                <p class="text-sm font-semibold text-gray-300">Performance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-900/30 to-emerald-900/30 rounded-xl p-8 border border-blue-500/20">
+                <h3 class="text-2xl font-bold text-white mb-4">
+                    <i class="fas fa-handshake text-emerald-400 mr-3"></i>Consultoria Especializada
+                </h3>
+                <p class="text-gray-300 mb-6">
+                    Nossos especialistas analisam suas necessidades e recomendam a solução ideal de hardware, garantindo ROI máximo e performance otimizada para seu negócio.
+                </p>
+                <button class="cta-button px-6 py-3 rounded-lg text-white font-semibold">
+                    Solicitar Consultoria
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Serviços Cloud e Licenciamento</span>
+                </h2>
+                <p class="text-xl text-gray-400">Soluções de Software via Canais Oficiais</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-cloud text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Cloud Computing</h3>
+                    <p class="text-gray-300 mb-6">
+                        Infraestrutura cloud escalável com alta disponibilidade e compliance total.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>AWS, Azure, Google Cloud</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Migração assistida</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Otimização de custos</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-certificate text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Licenciamento Software</h3>
+                    <p class="text-gray-300 mb-6">
+                        Licenças oficiais com suporte técnico e atualizações garantidas.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Canais oficiais</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Preços competitivos</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Renovação automática</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-headset text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Suporte Gerenciado</h3>
+                    <p class="text-gray-300 mb-6">
+                        Suporte técnico 24/7 com SLA garantido e resposta em tempo real.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Monitoramento 24/7</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Resposta imediata</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Gestão proativa</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service Packages -->
+            <div class="mt-16 grid md:grid-cols-2 gap-8">
+                <div class="glass-effect rounded-xl p-8 border border-blue-500/20">
+                    <h3 class="text-2xl font-bold text-white mb-6">
+                        <i class="fas fa-star text-emerald-400 mr-2"></i>Pacote Startup
+                    </h3>
+                    <div class="space-y-4 text-gray-300 mb-8">
+                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Até 10 usuários</p>
+                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>1 servidor cloud</p>
+                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Suporte básico</p>
+                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Backup automático</p>
+                    </div>
+                    <button class="cta-button w-full py-3 rounded-lg text-white font-semibold">
+                        Começar Agora
+                    </button>
+                </div>
+
+                <div class="glass-effect rounded-xl p-8 border-2 border-emerald-400/50">
+                    <h3 class="text-2xl font-bold text-white mb-6">
+                        <i class="fas fa-crown text-emerald-400 mr-2"></i>Pacote Enterprise
+                    </h3>
+                    <div class="space-y-4 text-gray-300 mb-8">
+                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Usuários ilimitados</p>
+                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Infraestrutura dedicada</p>
+                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Suporte premium 24/7</p>
+                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Compliance e segurança</p>
+                    </div>
+                    <button class="cta-button w-full py-3 rounded-lg text-white font-semibold">
+                        Falar com Especialista
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Stats Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold gradient-text mb-2">500+</h3>
+                    <p class="text-gray-400">Empresas Protegidas</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold gradient-text mb-2">99.9%</h3>
+                    <p class="text-gray-400">Uptime Garantido</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold gradient-text mb-2">24/7</h3>
+                    <p class="text-gray-400">Suporte Técnico</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold gradient-text mb-2">15+</h3>
+                    <p class="text-gray-400">Anos de Experiência</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CTA Final Section -->
+    <section id="contato" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-effect rounded-2xl p-12 border border-blue-500/20 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+                    Pronto para Transformar Sua Infraestrutura?
+                </h2>
+                <p class="text-xl text-gray-300 mb-10">
+                    Nossos especialistas estão prontos para ajudar você a implementar a solução ideal para seu negócio.
+                </p>
+                <a href="https://wa.me/5514981283373?text=Olá%2C%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20as%20soluções%20de%20TI." 
+                   target="_blank" 
+                   class="cta-button inline-block px-10 py-5 rounded-lg text-white font-bold text-lg">
+                    <i class="fab fa-whatsapp mr-3"></i>Falar com Especialista no WhatsApp
+                </a>
+                <p class="text-gray-400 mt-8 text-sm">
+                    Resposta garantida em até 2 horas • Consultoria sem compromisso
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-effect border-t border-blue-500/10 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Sobre</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-blue-400 transition">Quem Somos</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Nossa Missão</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Soluções</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#bitdefender" class="hover:text-blue-400 transition">Segurança</a></li>
+                        <li><a href="#hardware" class="hover:text-blue-400 transition">Hardware</a></li>
+                        <li><a href="#servicos" class="hover:text-blue-400 transition">Serviços</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Suporte</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-blue-400 transition">Documentação</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-500/10 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 TI Solutions. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll fade animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-fade').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('[data-mobile-menu]');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                const menu = document.querySelector('[data-mobile-nav]');
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
