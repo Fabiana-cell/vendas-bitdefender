@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infraestrutura de TI e Cibersegurança - Soluções Bitdefender</title>
+    <title>ALGroup - Consultoria Enterprise de TI | Hardware e Resiliência Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -142,6 +142,73 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+        }
+
+        .partner-logo {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            opacity: 1;
+        }
+
+        .form-input {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #e2e8f0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(16, 185, 129, 0.6);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: rgba(226, 232, 240, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 <body class="animated-bg">
@@ -154,10 +221,9 @@
                     <span class="text-xl font-bold gradient-text">ALGroup</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#bitdefender" class="hover:text-blue-400 transition">Segurança</a>
-                    <a href="#hardware" class="hover:text-blue-400 transition">Hardware</a>
-                    <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
-                    <a href="#contato" class="cta-button px-6 py-2 rounded-lg text-white font-semibold">Contato</a>
+                    <a href="#solucoes" class="hover:text-blue-400 transition">Soluções</a>
+                    <a href="#parceiros" class="hover:text-blue-400 transition">Parceiros</a>
+                    <a href="#contato" class="cta-button px-6 py-2 rounded-lg text-white font-semibold">Cotação</a>
                 </div>
             </div>
         </div>
@@ -169,21 +235,23 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="scroll-fade visible">
                     <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                        <span class="gradient-text">Infraestrutura de TI Inabalável</span>
+                        <span class="gradient-text">Disponibilidade de Hardware</span>
                         <br>
-                        <span class="text-white">e Cibersegurança de</span>
+                        <span class="text-white">e</span>
                         <br>
-                        <span class="neon-green">Próxima Geração</span>
+                        <span class="neon-green">Resiliência Digital</span>
+                        <br>
+                        <span class="text-white">para o Setor Enterprise</span>
                     </h1>
                     <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                        Proteja seu negócio com soluções enterprise de segurança, infraestrutura robusta e serviços cloud gerenciados. Confiado por empresas líderes no Brasil.
+                        Ecossistema de parceiros focado em infraestrutura crítica e reposição estratégica para Agronegócio, Indústria e Logística.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contato" class="cta-button px-8 py-4 rounded-lg text-white font-bold text-lg inline-block text-center">
-                            <i class="fas fa-phone mr-2"></i>Falar com Especialista
+                            <i class="fas fa-quote-right mr-2"></i>Solicitar Cotação
                         </a>
                         <button class="px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-400 font-bold hover:bg-blue-500/10 transition">
-                            <i class="fas fa-play-circle mr-2"></i>Ver Demo
+                            <i class="fas fa-phone mr-2"></i>Falar com Especialista
                         </button>
                     </div>
                 </div>
@@ -191,7 +259,7 @@
                     <div class="relative">
                         <div class="pulse-border rounded-2xl p-8 bg-gradient-to-br from-blue-900/20 to-emerald-900/20">
                             <i class="fas fa-server text-6xl text-blue-400 mb-4"></i>
-                            <p class="text-gray-300 text-lg">Segurança em Tempo Real</p>
+                            <p class="text-gray-300 text-lg">Infraestrutura Crítica Disponível</p>
                         </div>
                     </div>
                 </div>
@@ -201,344 +269,180 @@
 
     <div class="section-divider"></div>
 
-    <!-- Bitdefender Section -->
-    <section id="bitdefender" class="py-20 px-4 sm:px-6 lg:px-8">
+    <!-- Parceiros Homologados -->
+    <section id="parceiros" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">Proteção Bitdefender GravityZone</span>
+                    <span class="gradient-text">Parceiros Estratégicos</span>
                 </h2>
-                <p class="text-xl text-gray-400">Defesa contra Ransomware e Ameaças Avançadas</p>
+                <p class="text-xl text-gray-400">Tecnologias Homologadas e de Confiança</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
+                <!-- Dell -->
+                <div class="partner-logo hover-lift">
+                    <div class="text-center">
+                        <i class="fas fa-cube text-4xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400">Dell</p>
+                    </div>
+                </div>
+
+                <!-- HP -->
+                <div class="partner-logo hover-lift">
+                    <div class="text-center">
+                        <i class="fas fa-server text-4xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400">HP</p>
+                    </div>
+                </div>
+
+                <!-- Lenovo -->
+                <div class="partner-logo hover-lift">
+                    <div class="text-center">
+                        <i class="fas fa-laptop text-4xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400">Lenovo</p>
+                    </div>
+                </div>
+
+                <!-- Fortinet -->
+                <div class="partner-logo hover-lift">
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt text-4xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400">Fortinet</p>
+                    </div>
+                </div>
+
+                <!-- Bitdefender -->
+                <div class="partner-logo hover-lift">
+                    <div class="text-center">
+                        <i class="fas fa-lock text-4xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400">Bitdefender</p>
+                    </div>
+                </div>
+
+                <!-- Zebra -->
+                <div class="partner-logo hover-lift">
+                    <div class="text-center">
+                        <i class="fas fa-barcode text-4xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400">Zebra</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Soluções -->
+    <section id="solucoes" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Soluções Enterprise</span>
+                </h2>
+                <p class="text-xl text-gray-400">Expertise em Infraestrutura Crítica</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
+                <!-- Solução 1: Reposição Estratégica -->
                 <div class="feature-card rounded-xl p-8 hover-lift">
                     <div class="icon-box">
-                        <i class="fas fa-lock text-white"></i>
+                        <i class="fas fa-truck text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Proteção Ransomware</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Reposição Estratégica de Ativos</h3>
                     <p class="text-gray-300 mb-6">
-                        Detecção e bloqueio em tempo real de ataques ransomware com tecnologia comportamental avançada.
+                        Fornecimento ágil de Endpoints (Notebooks/Workstations) e ativos de mobilidade (Coletores de Dados) com garantia de disponibilidade.
                     </p>
                     <ul class="space-y-3 text-gray-300">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Análise comportamental</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Isolamento automático</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Recuperação de dados</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Entrega em 24-48 horas</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Configuração pré-instalada</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Suporte técnico incluído</li>
                     </ul>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Solução 2: Segurança de Borda -->
                 <div class="feature-card rounded-xl p-8 hover-lift">
                     <div class="icon-box">
-                        <i class="fas fa-sliders-h text-white"></i>
+                        <i class="fas fa-network-wired text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Gestão Centralizada</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Segurança de Borda e Redes</h3>
                     <p class="text-gray-300 mb-6">
-                        Console único para gerenciar toda sua infraestrutura de segurança com facilidade e eficiência.
+                        Implementação e suporte em Firewalls UTM (Fortinet) e conectividade industrial com redundância garantida.
                     </p>
                     <ul class="space-y-3 text-gray-300">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Dashboard intuitivo</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Relatórios em tempo real</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Automação de políticas</li>
-                    </ul>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="feature-card rounded-xl p-8 hover-lift">
-                    <div class="icon-box">
-                        <i class="fas fa-globe text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Cobertura Global</h3>
-                    <p class="text-gray-300 mb-6">
-                        Proteção para endpoints, servidores e infraestrutura cloud em qualquer lugar do mundo.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Multi-plataforma</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Suporte 24/7</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Compliance garantido</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Hardware Section -->
-    <section id="hardware" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">Infraestrutura de Hardware</span>
-                </h2>
-                <p class="text-xl text-gray-400">Soluções Consultivas de Servidores e Equipamentos</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-                <div>
-                    <div class="space-y-6">
-                        <div class="feature-card rounded-lg p-6 hover-lift">
-                            <h3 class="text-xl font-bold text-white mb-3">
-                                <i class="fas fa-server text-blue-400 mr-3"></i>Servidores Enterprise
-                            </h3>
-                            <p class="text-gray-300">
-                                Servidores de alta performance com redundância e escalabilidade para suas operações críticas.
-                            </p>
-                        </div>
-
-                        <div class="feature-card rounded-lg p-6 hover-lift">
-                            <h3 class="text-xl font-bold text-white mb-3">
-                                <i class="fas fa-microchip text-blue-400 mr-3"></i>Equipamentos de Infraestrutura
-                            </h3>
-                            <p class="text-gray-300">
-                                Switches, roteadores, firewalls e storage de marcas líderes do mercado global.
-                            </p>
-                        </div>
-
-                        <div class="feature-card rounded-lg p-6 hover-lift">
-                            <h3 class="text-xl font-bold text-white mb-3">
-                                <i class="fas fa-box text-blue-400 mr-3"></i>Portfolio Completo
-                            </h3>
-                            <p class="text-gray-300">
-                                Acesso aos maiores distribuidores de TI do Brasil e do mundo com preços competitivos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="pulse-border rounded-2xl p-12 bg-gradient-to-br from-blue-900/20 to-emerald-900/20">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="text-center">
-                                <i class="fas fa-network-wired text-4xl text-blue-400 mb-3"></i>
-                                <p class="text-sm font-semibold text-gray-300">Conectividade</p>
-                            </div>
-                            <div class="text-center">
-                                <i class="fas fa-database text-4xl text-emerald-400 mb-3"></i>
-                                <p class="text-sm font-semibold text-gray-300">Storage</p>
-                            </div>
-                            <div class="text-center">
-                                <i class="fas fa-shield-alt text-4xl text-blue-400 mb-3"></i>
-                                <p class="text-sm font-semibold text-gray-300">Segurança</p>
-                            </div>
-                            <div class="text-center">
-                                <i class="fas fa-bolt text-4xl text-emerald-400 mb-3"></i>
-                                <p class="text-sm font-semibold text-gray-300">Performance</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gradient-to-r from-blue-900/30 to-emerald-900/30 rounded-xl p-8 border border-blue-500/20">
-                <h3 class="text-2xl font-bold text-white mb-4">
-                    <i class="fas fa-handshake text-emerald-400 mr-3"></i>Consultoria Especializada
-                </h3>
-                <p class="text-gray-300 mb-6">
-                    Nossos especialistas analisam suas necessidades e recomendam a solução ideal de hardware, garantindo ROI máximo e performance otimizada para seu negócio.
-                </p>
-                <button class="cta-button px-6 py-3 rounded-lg text-white font-semibold">
-                    Solicitar Consultoria
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Serviços Section -->
-    <section id="servicos" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">Serviços Cloud e Licenciamento</span>
-                </h2>
-                <p class="text-xl text-gray-400">Soluções de Software via Canais Oficiais</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="feature-card rounded-xl p-8 hover-lift">
-                    <div class="icon-box">
-                        <i class="fas fa-cloud text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Cloud Computing</h3>
-                    <p class="text-gray-300 mb-6">
-                        Infraestrutura cloud escalável com alta disponibilidade e compliance total.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>AWS, Azure, Google Cloud</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Migração assistida</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Otimização de custos</li>
-                    </ul>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="feature-card rounded-xl p-8 hover-lift">
-                    <div class="icon-box">
-                        <i class="fas fa-certificate text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Licenciamento Software</h3>
-                    <p class="text-gray-300 mb-6">
-                        Licenças oficiais com suporte técnico e atualizações garantidas.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Canais oficiais</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Preços competitivos</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Renovação automática</li>
-                    </ul>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="feature-card rounded-xl p-8 hover-lift">
-                    <div class="icon-box">
-                        <i class="fas fa-headset text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Suporte Gerenciado</h3>
-                    <p class="text-gray-300 mb-6">
-                        Suporte técnico 24/7 com SLA garantido e resposta em tempo real.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Firewalls UTM Fortinet</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Conectividade industrial</li>
                         <li><i class="fas fa-check text-emerald-400 mr-2"></i>Monitoramento 24/7</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Resposta imediata</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Gestão proativa</li>
+                    </ul>
+                </div>
+
+                <!-- Solução 3: Proteção Avançada -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-brain text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Proteção Avançada via IA</h3>
+                    <p class="text-gray-300 mb-6">
+                        Soluções de Endpoint XDR (Bitdefender) para blindagem de dados contra Ransomware e ameaças avançadas.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>XDR Bitdefender</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Detecção de Ransomware</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Resposta automática</li>
                     </ul>
                 </div>
             </div>
-
-            <!-- Service Packages -->
-            <div class="mt-16 grid md:grid-cols-2 gap-8">
-                <div class="glass-effect rounded-xl p-8 border border-blue-500/20">
-                    <h3 class="text-2xl font-bold text-white mb-6">
-                        <i class="fas fa-star text-emerald-400 mr-2"></i>Pacote Startup
-                    </h3>
-                    <div class="space-y-4 text-gray-300 mb-8">
-                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Até 10 usuários</p>
-                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>1 servidor cloud</p>
-                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Suporte básico</p>
-                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Backup automático</p>
-                    </div>
-                    <button class="cta-button w-full py-3 rounded-lg text-white font-semibold">
-                        Começar Agora
-                    </button>
-                </div>
-
-                <div class="glass-effect rounded-xl p-8 border-2 border-emerald-400/50">
-                    <h3 class="text-2xl font-bold text-white mb-6">
-                        <i class="fas fa-crown text-emerald-400 mr-2"></i>Pacote Enterprise
-                    </h3>
-                    <div class="space-y-4 text-gray-300 mb-8">
-                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Usuários ilimitados</p>
-                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Infraestrutura dedicada</p>
-                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Suporte premium 24/7</p>
-                        <p><i class="fas fa-check text-emerald-400 mr-2"></i>Compliance e segurança</p>
-                    </div>
-                    <button class="cta-button w-full py-3 rounded-lg text-white font-semibold">
-                        Falar com Especialista
-                    </button>
-                </div>
-            </div>
         </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- Sobre Nós Section -->
-    <section id="sobre" class="py-20 px-4 sm:px-6 lg:px-8" style="background-color: #1a1f35;">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="scroll-fade visible">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8">
-                        <span class="gradient-text">Quem Somos & Nossa Missão</span>
-                    </h2>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-8">
-                        Somos o braço direito tecnológico de empresas que não podem parar. Nossa expertise une mais de uma década em infraestrutura crítica Dell e HP com a liderança global em cibersegurança da Bitdefender.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-8">
-                        <span class="font-bold text-emerald-400">Nossa Missão:</span> Proteger o ativo mais valioso dos nossos clientes: a informação. Não entregamos apenas software ou máquinas; entregamos resiliência digital para que você foque no que realmente importa: o seu negócio.
-                    </p>
-                    <a href="#" class="inline-block px-8 py-3 rounded-lg border-2 border-blue-500 text-blue-400 font-bold hover:bg-blue-500/10 transition">
-                        <i class="fas fa-download mr-2"></i>Baixar Portfólio PDF
-                    </a>
-                </div>
-                <div class="scroll-fade visible">
-                    <div class="space-y-8">
-                        <!-- Missão Card -->
-                        <div class="feature-card rounded-xl p-8 hover-lift">
-                            <div class="icon-box">
-                                <i class="fas fa-bullseye text-white"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white">Nossa Missão</h3>
-                            <p class="text-gray-300">
-                                Proteger o ativo mais valioso: a informação. Entregamos resiliência digital para que seu negócio prospere sem interrupções.
-                            </p>
-                        </div>
-                        <!-- Visão Card -->
-                        <div class="feature-card rounded-xl p-8 hover-lift">
-                            <div class="icon-box">
-                                <i class="fas fa-eye text-white"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white">Nossa Visão</h3>
-                            <p class="text-gray-300">
-                                Ser o parceiro de confiança em tecnologia para empresas que exigem segurança, performance e inovação contínua.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Stats Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <h3 class="text-4xl font-bold gradient-text mb-2">500+</h3>
-                    <p class="text-gray-400">Empresas Protegidas</p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-4xl font-bold gradient-text mb-2">99.9%</h3>
-                    <p class="text-gray-400">Uptime Garantido</p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-4xl font-bold gradient-text mb-2">24/7</h3>
-                    <p class="text-gray-400">Suporte Técnico</p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-4xl font-bold gradient-text mb-2">15+</h3>
-                    <p class="text-gray-400">Anos de Experiência</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- CTA Final Section -->
+    <!-- Formulário de Cotação -->
     <section id="contato" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto">
-            <div class="glass-effect rounded-2xl p-12 border border-blue-500/20 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-                    Pronto para Transformar Sua Infraestrutura?
+            <div class="glass-effect rounded-2xl p-12 border border-blue-500/20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text text-center">
+                    Solicitar Cotação de Hardware Enterprise
                 </h2>
-                <p class="text-xl text-gray-300 mb-10">
-                    Nossos especialistas estão prontos para ajudar você a implementar a solução ideal para seu negócio.
+                <p class="text-center text-gray-300 mb-10 text-lg">
+                    Preencha o formulário abaixo e receba uma proposta personalizada em até 24 horas.
                 </p>
-                <a href="https://wa.me/5514981283373?text=Olá%2C%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20as%20soluções%20de%20TI." 
-                   target="_blank" 
-                   class="cta-button inline-block px-10 py-5 rounded-lg text-white font-bold text-lg">
-                    <i class="fab fa-whatsapp mr-3"></i>Falar com Especialista no WhatsApp
-                </a>
-                <p class="text-gray-400 mt-8 text-sm">
-                    Resposta garantida em até 2 horas • Consultoria sem compromisso
+
+                <form class="space-y-6" id="cotacao-form">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Nome Completo</label>
+                            <input type="text" name="nome" placeholder="Seu nome" class="form-input w-full" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Empresa</label>
+                            <input type="text" name="empresa" placeholder="Nome da empresa" class="form-input w-full" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">E-mail Corporativo</label>
+                        <input type="email" name="email" placeholder="seu.email@empresa.com" class="form-input w-full" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">Necessidade de Hardware/Serviço</label>
+                        <textarea name="necessidade" placeholder="Descreva sua necessidade de infraestrutura..." class="form-input w-full h-32 resize-none" required></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button w-full py-4 rounded-lg text-white font-bold text-lg">
+                        <i class="fas fa-paper-plane mr-2"></i>Enviar Solicitação
+                    </button>
+                </form>
+
+                <p class="text-center text-gray-400 mt-8 text-sm">
+                    Seus dados serão tratados com confidencialidade. Atendimento especializado garantido.
                 </p>
             </div>
         </div>
     </section>
+
+    <div class="section-divider"></div>
 
     <!-- Footer -->
     <footer class="glass-effect border-t border-blue-500/10 py-12 px-4 sm:px-6 lg:px-8">
@@ -548,47 +452,51 @@
                     <h4 class="text-white font-bold mb-4">Sobre</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="#" class="hover:text-blue-400 transition">Quem Somos</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition">Nossa Missão</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Nossa Expertise</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Contato</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Soluções</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#bitdefender" class="hover:text-blue-400 transition">Segurança</a></li>
-                        <li><a href="#hardware" class="hover:text-blue-400 transition">Hardware</a></li>
-                        <li><a href="#servicos" class="hover:text-blue-400 transition">Serviços</a></li>
+                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Hardware</a></li>
+                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Segurança</a></li>
+                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Consultoria</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">Suporte</h4>
+                    <h4 class="text-white font-bold mb-4">Parceiros</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#" class="hover:text-blue-400 transition">Documentação</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition">FAQ</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition">Contato</a></li>
+                        <li><a href="#parceiros" class="hover:text-blue-400 transition">Dell</a></li>
+                        <li><a href="#parceiros" class="hover:text-blue-400 transition">HP & Fortinet</a></li>
+                        <li><a href="#parceiros" class="hover:text-blue-400 transition">Bitdefender</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">Redes Sociais</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
+                    <h4 class="text-white font-bold mb-4">Contato</h4>
+                    <div class="space-y-2 text-gray-400 text-sm">
+                        <p><i class="fas fa-map-marker-alt text-emerald-400 mr-2"></i>Matão, Bauru e Região</p>
+                        <p><i class="fas fa-phone text-emerald-400 mr-2"></i>+55 14 98128-3373</p>
+                        <p><i class="fas fa-envelope text-emerald-400 mr-2"></i>contato@algroup.com.br</p>
                     </div>
                 </div>
             </div>
 
             <div class="border-t border-blue-500/10 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2024 ALGroup. Todos os direitos reservados.</p>
+                <p class="mb-4"><strong>AL Group - Consultoria Sênior em Infraestrutura de TI</strong></p>
+                <p>Atendimento especializado em Matão, Bauru e Região | Disponibilidade de Hardware e Resiliência Digital para Agronegócio, Indústria e Logística</p>
+                <p class="mt-4">&copy; 2024 ALGroup. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5514981283373?text=Olá%2C%20gostaria%20de%20solicitar%20uma%20cotação%20de%20hardware%20enterprise%20para%20minha%20empresa." 
+       target="_blank" 
+       class="whatsapp-float" 
+       title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         // Smooth scroll for anchor links
@@ -623,14 +531,27 @@
             observer.observe(el);
         });
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('[data-mobile-menu]');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', function() {
-                const menu = document.querySelector('[data-mobile-nav]');
-                menu.classList.toggle('hidden');
-            });
-        }
+        // Form submission
+        document.getElementById('cotacao-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                nome: document.querySelector('input[name="nome"]').value,
+                empresa: document.querySelector('input[name="empresa"]').value,
+                email: document.querySelector('input[name="email"]').value,
+                necessidade: document.querySelector('textarea[name="necessidade"]').value
+            };
+
+            // Enviar para WhatsApp
+            const mensagem = `Olá! Recebi uma solicitação de cotação:\n\n*Nome:* ${formData.nome}\n*Empresa:* ${formData.empresa}\n*E-mail:* ${formData.email}\n*Necessidade:* ${formData.necessidade}`;
+            const whatsappUrl = `https://wa.me/5514981283373?text=${encodeURIComponent(mensagem)}`;
+            
+            window.open(whatsappUrl, '_blank');
+            
+            // Limpar formulário
+            this.reset();
+            alert('Sua solicitação foi enviada! Você será redirecionado para o WhatsApp.');
+        });
     </script>
 </body>
 </html>
