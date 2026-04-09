@@ -168,25 +168,25 @@
         }
 
         .partner-logo {
-            height: 80px;
+            height: auto;
+            max-height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0.7;
             transition: all 0.3s ease;
             filter: grayscale(100%);
         }
 
         .partner-logo:hover {
-            opacity: 1;
             filter: grayscale(0%);
             transform: scale(1.05);
         }
 
         .partner-logo img {
-            max-height: 60px;
-            max-width: 150px;
+            max-height: 70px;
+            max-width: 180px;
             object-fit: contain;
+            opacity: 1;
         }
 
         .form-input {
@@ -290,46 +290,12 @@
                 <p class="text-xl text-gray-400">Tecnologias Homologadas e de Confiança Global</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
-                <!-- Dell -->
-                <div class="partner-logo hover-lift">
-                    <div class="text-center">
-                        <i class="fas fa-cube text-5xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400 mt-2">Dell</p>
-                    </div>
-                </div>
-
-                <!-- HP -->
-                <div class="partner-logo hover-lift">
-                    <div class="text-center">
-                        <i class="fas fa-server text-5xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400 mt-2">HP</p>
-                    </div>
-                </div>
-
-                <!-- Lenovo -->
-                <div class="partner-logo hover-lift">
-                    <div class="text-center">
-                        <i class="fas fa-laptop text-5xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400 mt-2">Lenovo</p>
-                    </div>
-                </div>
-
-                <!-- Bitdefender -->
-                <div class="partner-logo hover-lift">
-                    <div class="text-center">
-                        <i class="fas fa-lock text-5xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400 mt-2">Bitdefender</p>
-                    </div>
-                </div>
-
-                <!-- Zebra -->
-                <div class="partner-logo hover-lift">
-                    <div class="text-center">
-                        <i class="fas fa-barcode text-5xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400 mt-2">Zebra</p>
-                    </div>
-                </div>
+            <div class="flex flex-wrap justify-center items-center gap-12 px-4 gray">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell" class="partner-logo hover-lift" style="opacity: 100; filter: grayscale(100%);" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo.svg" alt="HP" class="partner-logo hover-lift" style="opacity: 100; filter: grayscale(100%);" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg" alt="Lenovo" class="partner-logo hover-lift" style="opacity: 100; filter: grayscale(100%);" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Bitdefender_logo.svg" alt="Bitdefender" class="partner-logo hover-lift" style="opacity: 100; filter: grayscale(100%);" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Zebra_Technologies_logo.svg" alt="Zebra" class="partner-logo hover-lift" style="opacity: 100; filter: grayscale(100%);" />
             </div>
         </div>
     </section>
