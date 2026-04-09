@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALGroup - Consultoria Enterprise de TI | Hardware e Resiliência Digital</title>
+    <title>ALGroup - Consultoria Enterprise de TI | Cibersegurança e Ativos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -168,16 +168,25 @@
         }
 
         .partner-logo {
-            height: 60px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0.7;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
         }
 
         .partner-logo:hover {
             opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .partner-logo img {
+            max-height: 60px;
+            max-width: 150px;
+            object-fit: contain;
         }
 
         .form-input {
@@ -223,7 +232,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#solucoes" class="hover:text-blue-400 transition">Soluções</a>
                     <a href="#parceiros" class="hover:text-blue-400 transition">Parceiros</a>
-                    <a href="#contato" class="cta-button px-6 py-2 rounded-lg text-white font-semibold">Cotação</a>
+                    <a href="#consultoria" class="cta-button px-6 py-2 rounded-lg text-white font-semibold">Consultoria</a>
                 </div>
             </div>
         </div>
@@ -235,31 +244,33 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="scroll-fade visible">
                     <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                        <span class="gradient-text">Disponibilidade de Hardware</span>
+                        <span class="gradient-text">Desde 2011,</span>
                         <br>
-                        <span class="text-white">e</span>
+                        <span class="text-white">conectando empresas</span>
                         <br>
-                        <span class="neon-green">Resiliência Digital</span>
+                        <span class="text-white">brasileiras às maiores</span>
                         <br>
-                        <span class="text-white">para o Setor Enterprise</span>
+                        <span class="neon-green">tecnologias globais.</span>
                     </h1>
                     <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                        Ecossistema de parceiros focado em infraestrutura crítica e reposição estratégica para Agronegócio, Indústria e Logística.
+                        Cibersegurança preditiva, resiliência digital e ativos enterprise para Agronegócio, Indústria e Logística.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contato" class="cta-button px-8 py-4 rounded-lg text-white font-bold text-lg inline-block text-center">
-                            <i class="fas fa-quote-right mr-2"></i>Solicitar Cotação
+                        <a href="#consultoria" class="cta-button px-8 py-4 rounded-lg text-white font-bold text-lg inline-block text-center">
+                            <i class="fas fa-quote-right mr-2"></i>Solicitar Consultoria
                         </a>
-                        <button class="px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-400 font-bold hover:bg-blue-500/10 transition">
-                            <i class="fas fa-phone mr-2"></i>Falar com Especialista
-                        </button>
+                        <a href="https://wa.me/5514981283373?text=Olá%2C%20gostaria%20de%20solicitar%20uma%20consultoria%20de%20segurança%20e%20ativos%20enterprise." 
+                           target="_blank"
+                           class="px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-400 font-bold hover:bg-blue-500/10 transition">
+                            <i class="fas fa-phone mr-2"></i>WhatsApp
+                        </a>
                     </div>
                 </div>
                 <div class="scroll-fade visible">
                     <div class="relative">
                         <div class="pulse-border rounded-2xl p-8 bg-gradient-to-br from-blue-900/20 to-emerald-900/20">
-                            <i class="fas fa-server text-6xl text-blue-400 mb-4"></i>
-                            <p class="text-gray-300 text-lg">Infraestrutura Crítica Disponível</p>
+                            <i class="fas fa-lock text-6xl text-blue-400 mb-4"></i>
+                            <p class="text-gray-300 text-lg">Segurança e Resiliência</p>
                         </div>
                     </div>
                 </div>
@@ -276,55 +287,47 @@
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
                     <span class="gradient-text">Parceiros Estratégicos</span>
                 </h2>
-                <p class="text-xl text-gray-400">Tecnologias Homologadas e de Confiança</p>
+                <p class="text-xl text-gray-400">Tecnologias Homologadas e de Confiança Global</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
                 <!-- Dell -->
                 <div class="partner-logo hover-lift">
                     <div class="text-center">
-                        <i class="fas fa-cube text-4xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400">Dell</p>
+                        <i class="fas fa-cube text-5xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400 mt-2">Dell</p>
                     </div>
                 </div>
 
                 <!-- HP -->
                 <div class="partner-logo hover-lift">
                     <div class="text-center">
-                        <i class="fas fa-server text-4xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400">HP</p>
+                        <i class="fas fa-server text-5xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400 mt-2">HP</p>
                     </div>
                 </div>
 
                 <!-- Lenovo -->
                 <div class="partner-logo hover-lift">
                     <div class="text-center">
-                        <i class="fas fa-laptop text-4xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400">Lenovo</p>
-                    </div>
-                </div>
-
-                <!-- Fortinet -->
-                <div class="partner-logo hover-lift">
-                    <div class="text-center">
-                        <i class="fas fa-shield-alt text-4xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400">Fortinet</p>
+                        <i class="fas fa-laptop text-5xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400 mt-2">Lenovo</p>
                     </div>
                 </div>
 
                 <!-- Bitdefender -->
                 <div class="partner-logo hover-lift">
                     <div class="text-center">
-                        <i class="fas fa-lock text-4xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400">Bitdefender</p>
+                        <i class="fas fa-lock text-5xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400 mt-2">Bitdefender</p>
                     </div>
                 </div>
 
                 <!-- Zebra -->
                 <div class="partner-logo hover-lift">
                     <div class="text-center">
-                        <i class="fas fa-barcode text-4xl text-gray-500 mb-2"></i>
-                        <p class="text-sm font-semibold text-gray-400">Zebra</p>
+                        <i class="fas fa-barcode text-5xl text-gray-500 mb-2"></i>
+                        <p class="text-sm font-semibold text-gray-400 mt-2">Zebra</p>
                     </div>
                 </div>
             </div>
@@ -333,62 +336,62 @@
 
     <div class="section-divider"></div>
 
-    <!-- Soluções -->
+    <!-- Soluções (80/20 - Foco em Software/Segurança) -->
     <section id="solucoes" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
                     <span class="gradient-text">Soluções Enterprise</span>
                 </h2>
-                <p class="text-xl text-gray-400">Expertise em Infraestrutura Crítica</p>
+                <p class="text-xl text-gray-400">Consultoria Focada em Segurança e Resiliência</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Solução 1: Reposição Estratégica -->
-                <div class="feature-card rounded-xl p-8 hover-lift">
-                    <div class="icon-box">
-                        <i class="fas fa-truck text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Reposição Estratégica de Ativos</h3>
-                    <p class="text-gray-300 mb-6">
-                        Fornecimento ágil de Endpoints (Notebooks/Workstations) e ativos de mobilidade (Coletores de Dados) com garantia de disponibilidade.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Entrega em 24-48 horas</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Configuração pré-instalada</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Suporte técnico incluído</li>
-                    </ul>
-                </div>
-
-                <!-- Solução 2: Segurança de Borda -->
-                <div class="feature-card rounded-xl p-8 hover-lift">
-                    <div class="icon-box">
-                        <i class="fas fa-network-wired text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Segurança de Borda e Redes</h3>
-                    <p class="text-gray-300 mb-6">
-                        Implementação e suporte em Firewalls UTM (Fortinet) e conectividade industrial com redundância garantida.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Firewalls UTM Fortinet</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Conectividade industrial</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Monitoramento 24/7</li>
-                    </ul>
-                </div>
-
-                <!-- Solução 3: Proteção Avançada -->
+                <!-- Solução 1: Cibersegurança Preditiva -->
                 <div class="feature-card rounded-xl p-8 hover-lift">
                     <div class="icon-box">
                         <i class="fas fa-brain text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Proteção Avançada via IA</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Cibersegurança Preditiva</h3>
                     <p class="text-gray-300 mb-6">
-                        Soluções de Endpoint XDR (Bitdefender) para blindagem de dados contra Ransomware e ameaças avançadas.
+                        Proteção avançada com Bitdefender GravityZone. IA que previne Ransomware e ameaças antes que aconteçam.
                     </p>
                     <ul class="space-y-3 text-gray-300">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>XDR Bitdefender</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Detecção de Ransomware</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Resposta automática</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Detecção Comportamental com IA</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Blindagem contra Ransomware</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Conformidade Digital</li>
+                    </ul>
+                </div>
+
+                <!-- Solução 2: Resiliência e Continuidade -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-shield-alt text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Resiliência e Continuidade</h3>
+                    <p class="text-gray-300 mb-6">
+                        Blindagem de arquivos e conformidade digital. Garanta a disponibilidade dos seus dados críticos.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Proteção de Dados Críticos</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Conformidade LGPD/ISO</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Recuperação Rápida</li>
+                    </ul>
+                </div>
+
+                <!-- Solução 3: Ativos Enterprise -->
+                <div class="feature-card rounded-xl p-8 hover-lift">
+                    <div class="icon-box">
+                        <i class="fas fa-laptop text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Ativos Enterprise</h3>
+                    <p class="text-gray-300 mb-6">
+                        Notebooks Dell/HP e Coletores Zebra. Hardware de alta performance para operações críticas.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Notebooks Dell/HP Premium</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Coletores Zebra Robustos</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Consultoria de Seleção</li>
                     </ul>
                 </div>
             </div>
@@ -397,18 +400,18 @@
 
     <div class="section-divider"></div>
 
-    <!-- Formulário de Cotação -->
-    <section id="contato" class="py-20 px-4 sm:px-6 lg:px-8">
+    <!-- Formulário de Consultoria -->
+    <section id="consultoria" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto">
             <div class="glass-effect rounded-2xl p-12 border border-blue-500/20">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text text-center">
-                    Solicitar Cotação de Hardware Enterprise
+                    Solicitar Consultoria de Segurança e Ativos
                 </h2>
                 <p class="text-center text-gray-300 mb-10 text-lg">
-                    Preencha o formulário abaixo e receba uma proposta personalizada em até 24 horas.
+                    Avalie a resiliência da sua infraestrutura e receba uma proposta personalizada para licenciamento e hardware de alta performance.
                 </p>
 
-                <form class="space-y-6" id="cotacao-form">
+                <form class="space-y-6" id="consultoria-form">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-gray-300 mb-2">Nome Completo</label>
@@ -426,17 +429,17 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-semibold text-gray-300 mb-2">Necessidade de Hardware/Serviço</label>
-                        <textarea name="necessidade" placeholder="Descreva sua necessidade de infraestrutura..." class="form-input w-full h-32 resize-none" required></textarea>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">Necessidade de Licenciamento/Segurança/Ativos</label>
+                        <textarea name="necessidade" placeholder="Descreva sua necessidade de licenciamento Bitdefender, cibersegurança ou ativos de hardware..." class="form-input w-full h-32 resize-none" required></textarea>
                     </div>
 
                     <button type="submit" class="cta-button w-full py-4 rounded-lg text-white font-bold text-lg">
-                        <i class="fas fa-paper-plane mr-2"></i>Enviar Solicitação
+                        <i class="fas fa-paper-plane mr-2"></i>Enviar Solicitação de Consultoria
                     </button>
                 </form>
 
                 <p class="text-center text-gray-400 mt-8 text-sm">
-                    Seus dados serão tratados com confidencialidade. Atendimento especializado garantido.
+                    Seus dados serão tratados com confidencialidade. Consultoria especializada garantida.
                 </p>
             </div>
         </div>
@@ -459,23 +462,22 @@
                 <div>
                     <h4 class="text-white font-bold mb-4">Soluções</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Hardware</a></li>
-                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Segurança</a></li>
-                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Consultoria</a></li>
+                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Cibersegurança</a></li>
+                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Resiliência</a></li>
+                        <li><a href="#solucoes" class="hover:text-blue-400 transition">Ativos</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Parceiros</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#parceiros" class="hover:text-blue-400 transition">Dell</a></li>
-                        <li><a href="#parceiros" class="hover:text-blue-400 transition">HP & Fortinet</a></li>
+                        <li><a href="#parceiros" class="hover:text-blue-400 transition">Dell & HP</a></li>
                         <li><a href="#parceiros" class="hover:text-blue-400 transition">Bitdefender</a></li>
+                        <li><a href="#parceiros" class="hover:text-blue-400 transition">Zebra</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Contato</h4>
                     <div class="space-y-2 text-gray-400 text-sm">
-                        <p><i class="fas fa-map-marker-alt text-emerald-400 mr-2"></i>Matão, Bauru e Região</p>
                         <p><i class="fas fa-phone text-emerald-400 mr-2"></i>+55 14 98128-3373</p>
                         <p><i class="fas fa-envelope text-emerald-400 mr-2"></i>contato@algroup.com.br</p>
                     </div>
@@ -484,14 +486,14 @@
 
             <div class="border-t border-blue-500/10 pt-8 text-center text-gray-400 text-sm">
                 <p class="mb-4"><strong>AL Group - Consultoria Sênior em Infraestrutura de TI</strong></p>
-                <p>Atendimento especializado em Matão, Bauru e Região | Disponibilidade de Hardware e Resiliência Digital para Agronegócio, Indústria e Logística</p>
-                <p class="mt-4">&copy; 2024 ALGroup. Todos os direitos reservados.</p>
+                <p>Disponibilidade de Hardware e Resiliência Digital para Agronegócio, Indústria e Logística</p>
+                <p class="mt-4">&copy; 2026 ALGroup. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Botão Flutuante WhatsApp -->
-    <a href="https://wa.me/5514981283373?text=Olá%2C%20gostaria%20de%20solicitar%20uma%20cotação%20de%20hardware%20enterprise%20para%20minha%20empresa." 
+    <a href="https://wa.me/5514981283373?text=Olá%2C%20gostaria%20de%20solicitar%20uma%20consultoria%20de%20segurança%20e%20ativos%20enterprise." 
        target="_blank" 
        class="whatsapp-float" 
        title="Fale conosco no WhatsApp">
@@ -532,7 +534,7 @@
         });
 
         // Form submission
-        document.getElementById('cotacao-form').addEventListener('submit', function(e) {
+        document.getElementById('consultoria-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const formData = {
@@ -543,7 +545,7 @@
             };
 
             // Enviar para WhatsApp
-            const mensagem = `Olá! Recebi uma solicitação de cotação:\n\n*Nome:* ${formData.nome}\n*Empresa:* ${formData.empresa}\n*E-mail:* ${formData.email}\n*Necessidade:* ${formData.necessidade}`;
+            const mensagem = `Olá! Recebi uma solicitação de consultoria:\n\n*Nome:* ${formData.nome}\n*Empresa:* ${formData.empresa}\n*E-mail:* ${formData.email}\n*Necessidade:* ${formData.necessidade}`;
             const whatsappUrl = `https://wa.me/5514981283373?text=${encodeURIComponent(mensagem)}`;
             
             window.open(whatsappUrl, '_blank');
