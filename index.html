@@ -31,343 +31,97 @@
       }
     </script>
     <style>
-      :root {
-        --ink: #14201f;
-        --muted: #5d6a67;
-        --line: #dce5e1;
-        --paper: #f7faf8;
-        --white: #ffffff;
-        --teal: #0f7f78;
-        --green: #5e9d67;
-        --amber: #c2872f;
-        --charcoal: #192322;
-        --soft: #edf4f0;
-      }
-
+      :root { --ink:#14201f; --muted:#5d6a67; --line:#dce5e1; --paper:#f7faf8; --white:#ffffff; --teal:#0f7f78; --green:#5e9d67; --amber:#c2872f; --charcoal:#192322; --soft:#edf4f0; }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        color: var(--ink);
-        background: var(--paper);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.5;
-      }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.5; }
       a { color: inherit; text-decoration: none; }
       svg { display: block; max-width: 100%; }
-
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-        min-height: 72px;
-        padding: 14px clamp(18px, 4vw, 64px);
-        background: rgba(247, 250, 248, .92);
-        border-bottom: 1px solid rgba(220, 229, 225, .85);
-        backdrop-filter: blur(16px);
-      }
+      .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; padding: 14px clamp(18px, 4vw, 64px); background: rgba(247,250,248,.92); border-bottom: 1px solid rgba(220,229,225,.85); backdrop-filter: blur(16px); }
       .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 850; }
-      .brand-mark {
-        display: grid;
-        place-items: center;
-        width: 38px;
-        height: 38px;
-        color: var(--white);
-        background: var(--charcoal);
-        border-radius: 8px;
-        font-size: .9rem;
-      }
+      .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; color: var(--white); background: var(--charcoal); border-radius: 8px; font-size: .9rem; }
       .nav { display: flex; gap: clamp(14px, 3vw, 32px); color: var(--muted); font-size: .95rem; }
       .nav a:hover { color: var(--teal); }
-      .header-cta, .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 44px;
-        padding: 0 18px;
-        border-radius: 8px;
-        font-weight: 750;
-        white-space: nowrap;
-      }
-      .header-cta { color: var(--teal); border: 1px solid rgba(15, 127, 120, .28); background: var(--white); }
-
-      .hero {
-        display: grid;
-        grid-template-columns: minmax(0, .92fr) minmax(360px, 1.08fr);
-        align-items: center;
-        gap: clamp(24px, 5vw, 72px);
-        min-height: calc(100vh - 72px);
-        padding: clamp(42px, 7vw, 96px) clamp(18px, 4vw, 64px) 54px;
-        overflow: hidden;
-      }
+      .header-cta, .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; border-radius: 8px; font-weight: 750; white-space: nowrap; }
+      .header-cta { color: var(--teal); border: 1px solid rgba(15,127,120,.28); background: var(--white); }
+      .hero { display: grid; grid-template-columns: minmax(0,.92fr) minmax(360px,1.08fr); align-items: center; gap: clamp(24px,5vw,72px); min-height: calc(100vh - 72px); padding: clamp(42px,7vw,96px) clamp(18px,4vw,64px) 54px; overflow: hidden; }
       .hero-content { max-width: 760px; }
-      .eyebrow {
-        margin: 0 0 14px;
-        color: var(--teal);
-        font-size: .78rem;
-        font-weight: 850;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-      h1, h2, h3, p { margin-top: 0; }
-      h1 { margin-bottom: 24px; max-width: 840px; font-size: clamp(2.35rem, 5.2vw, 5.15rem); line-height: .98; letter-spacing: 0; }
-      h2 { margin-bottom: 18px; font-size: clamp(2rem, 4vw, 4rem); line-height: 1.02; letter-spacing: 0; }
+      .eyebrow { margin: 0 0 14px; color: var(--teal); font-size: .78rem; font-weight: 850; letter-spacing: 0; text-transform: uppercase; }
+      h1,h2,h3,p { margin-top: 0; }
+      h1 { margin-bottom: 24px; max-width: 840px; font-size: clamp(2.35rem,5.2vw,5.15rem); line-height: .98; letter-spacing: 0; }
+      h2 { margin-bottom: 18px; font-size: clamp(2rem,4vw,4rem); line-height: 1.02; letter-spacing: 0; }
       h3 { margin-bottom: 10px; font-size: 1.08rem; line-height: 1.25; }
-      .hero-copy { max-width: 700px; color: var(--muted); font-size: clamp(1.04rem, 1.5vw, 1.22rem); }
+      .hero-copy { max-width: 700px; color: var(--muted); font-size: clamp(1.04rem,1.5vw,1.22rem); }
       .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
       .button.primary { color: var(--white); background: var(--teal); box-shadow: 0 14px 32px rgba(15,127,120,.22); }
       .button.primary:hover { background: #0a6f69; }
       .button.secondary { color: var(--charcoal); background: var(--white); border: 1px solid var(--line); }
       .button.dark { background: var(--charcoal); box-shadow: none; }
-
-      .hero-visual {
-        position: relative;
-        min-height: 480px;
-        padding: clamp(18px, 3vw, 34px);
-        background: linear-gradient(135deg, #ffffff 0%, #eef7f3 100%);
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        box-shadow: 0 34px 90px rgba(20,32,31,.16);
-        overflow: hidden;
-      }
-      .hero-visual::before {
-        content: "";
-        position: absolute;
-        inset: auto -80px -120px auto;
-        width: 280px;
-        height: 280px;
-        background: rgba(15, 127, 120, .12);
-        border-radius: 50%;
-      }
+      .hero-visual { position: relative; min-height: 480px; padding: clamp(18px,3vw,34px); background: linear-gradient(135deg,#ffffff 0%,#eef7f3 100%); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 34px 90px rgba(20,32,31,.16); overflow: hidden; }
+      .hero-visual::before { content: ""; position: absolute; inset: auto -80px -120px auto; width: 280px; height: 280px; background: rgba(15,127,120,.12); border-radius: 50%; }
       .visual-caption { margin: 16px 0 0; color: var(--muted); font-size: .92rem; }
-
-      .trust-strip {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        margin: 0 clamp(18px, 4vw, 64px);
-        background: var(--line);
-        border: 1px solid var(--line);
-      }
+      .trust-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin: 0 clamp(18px,4vw,64px); background: var(--line); border: 1px solid var(--line); }
       .trust-strip div { min-height: 128px; padding: 28px; background: var(--white); }
-      .trust-strip strong, .trust-strip span { display: block; }
+      .trust-strip strong,.trust-strip span { display: block; }
       .trust-strip strong { margin-bottom: 8px; font-size: 1.06rem; }
-
-      .section, .split-section, .cta-section, .comparison-section, .seo-section, .faq-section { padding: clamp(64px, 9vw, 124px) clamp(18px, 4vw, 64px); }
+      .section,.split-section,.cta-section,.comparison-section,.seo-section,.faq-section { padding: clamp(64px,9vw,124px) clamp(18px,4vw,64px); }
       .section-heading { max-width: 840px; margin-bottom: 36px; }
-      .section-heading p, .solution-card p, .steps p, .text-stack p, .cta-section p, .comparison-table p, .trust-strip span, .seo-card p, .faq-item p { color: var(--muted); }
-
-      .comparison-section { padding-top: clamp(54px, 7vw, 96px); }
+      .section-heading p,.solution-card p,.steps p,.text-stack p,.cta-section p,.comparison-table p,.trust-strip span,.seo-card p,.faq-item p { color: var(--muted); }
+      .comparison-section { padding-top: clamp(54px,7vw,96px); }
       .comparison-table { overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: 8px; }
       .comparison-row { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
       .comparison-row:first-child { border-top: 0; }
-      .comparison-cell { padding: clamp(20px, 3vw, 34px); }
+      .comparison-cell { padding: clamp(20px,3vw,34px); }
       .comparison-cell.before { background: #fbf6f0; }
       .comparison-cell.after { background: #f0f8f5; border-left: 1px solid var(--line); }
       .comparison-cell strong { display: block; margin-bottom: 8px; color: var(--charcoal); font-size: 1.05rem; }
       .comparison-cell p { margin-bottom: 0; }
-
-      .solution-grid, .seo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-      .solution-card, .seo-card, .faq-item { padding: 28px; background: var(--white); border: 1px solid var(--line); border-radius: 8px; }
+      .solution-grid,.seo-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+      .solution-card,.seo-card,.faq-item { padding: 28px; background: var(--white); border: 1px solid var(--line); border-radius: 8px; }
       .solution-card { min-height: 300px; }
       .solution-card span { display: inline-flex; margin-bottom: 42px; color: var(--amber); font-weight: 850; }
       .card-visual { width: 58px; height: 58px; margin-bottom: 28px; color: var(--teal); }
-
-      .split-section {
-        display: grid;
-        grid-template-columns: minmax(0, .86fr) minmax(320px, 1fr);
-        gap: clamp(28px, 7vw, 92px);
-        align-items: start;
-        background: var(--charcoal);
-        color: var(--white);
-      }
+      .split-section { display: grid; grid-template-columns: minmax(0,.86fr) minmax(320px,1fr); gap: clamp(28px,7vw,92px); align-items: start; background: var(--charcoal); color: var(--white); }
       .split-section .eyebrow { color: #8dd7c6; }
       .split-section p { color: rgba(255,255,255,.78); }
       .text-stack { display: grid; gap: 18px; font-size: 1.08rem; }
       .muted { background: var(--soft); }
-      .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+      .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
       .steps div { padding: 24px; background: var(--white); border: 1px solid var(--line); border-radius: 8px; }
       .steps span { display: grid; place-items: center; width: 34px; height: 34px; margin-bottom: 34px; color: var(--white); background: var(--green); border-radius: 8px; font-weight: 800; }
       .seo-section { background: var(--white); }
       .seo-card { min-height: 210px; background: #fbfdfc; }
-      .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      .faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
       .cta-section { display: flex; align-items: center; justify-content: space-between; gap: 32px; background: var(--white); }
       .cta-section div { max-width: 760px; }
-
-      @media (max-width: 980px) {
-        .site-header { position: static; flex-wrap: wrap; }
-        .nav { order: 3; width: 100%; justify-content: space-between; }
-        .hero, .split-section { grid-template-columns: 1fr; }
-        .hero { min-height: auto; }
-        .hero-visual { min-height: 0; }
-        .solution-grid, .steps, .seo-grid, .trust-strip { grid-template-columns: 1fr 1fr; }
-        .cta-section { align-items: flex-start; flex-direction: column; }
-      }
-      @media (max-width: 620px) {
-        .header-cta { display: none; }
-        .nav { overflow-x: auto; justify-content: flex-start; padding-bottom: 2px; }
-        .hero { padding-top: 38px; }
-        .hero-actions, .button { width: 100%; }
-        .solution-grid, .steps, .seo-grid, .faq-grid, .trust-strip, .comparison-row { grid-template-columns: 1fr; }
-        .comparison-cell.after { border-left: 0; border-top: 1px solid var(--line); }
-        .solution-card, .steps div, .seo-card { min-height: auto; }
-      }
+      .site-footer { padding: 28px clamp(18px,4vw,64px); color: rgba(255,255,255,.78); background: var(--charcoal); text-align: center; font-size: .95rem; }
+      @media (max-width: 980px) { .site-header { position: static; flex-wrap: wrap; } .nav { order: 3; width: 100%; justify-content: space-between; } .hero,.split-section { grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-visual { min-height: 0; } .solution-grid,.steps,.seo-grid,.trust-strip { grid-template-columns: 1fr 1fr; } .cta-section { align-items: flex-start; flex-direction: column; } }
+      @media (max-width: 620px) { .header-cta { display: none; } .nav { overflow-x: auto; justify-content: flex-start; padding-bottom: 2px; } .hero { padding-top: 38px; } .hero-actions,.button { width: 100%; } .solution-grid,.steps,.seo-grid,.faq-grid,.trust-strip,.comparison-row { grid-template-columns: 1fr; } .comparison-cell.after { border-left: 0; border-top: 1px solid var(--line); } .solution-card,.steps div,.seo-card { min-height: auto; } }
     </style>
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#" aria-label="ALGroup"><span class="brand-mark">AL</span><span>ALGroup</span></a>
-      <nav class="nav" aria-label="Principal">
-        <a href="#solucoes">Soluções</a>
-        <a href="#automacao">Automação</a>
-        <a href="#metodo">Método</a>
-        <a href="#contato">Contato</a>
-      </nav>
+      <nav class="nav" aria-label="Principal"><a href="#solucoes">Soluções</a><a href="#automacao">Automação</a><a href="#metodo">Método</a><a href="#contato">Contato</a></nav>
       <a class="header-cta" href="#contato">Diagnóstico</a>
     </header>
-
     <main>
       <section class="hero">
-        <div class="hero-content">
-          <p class="eyebrow">Automação de processos empresariais</p>
-          <h1>Chega de gerir sua empresa por puxadinhos no WhatsApp e planilhas infinitas.</h1>
-          <p class="hero-copy">A ALGroup transforma seus gargalos manuais em fluxos automáticos. Criamos aplicativos sob medida que organizam sua casa, eliminam o retrabalho e devolvem o tempo que sua equipe perde com tarefas repetitivas.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#contato">Quero automatizar um processo</a>
-            <a class="button secondary" href="#solucoes">Ver exemplos reais</a>
-          </div>
-        </div>
+        <div class="hero-content"><p class="eyebrow">Automação de processos empresariais</p><h1>Chega de gerir sua empresa por puxadinhos no WhatsApp e planilhas infinitas.</h1><p class="hero-copy">A ALGroup transforma seus gargalos manuais em fluxos automáticos. Criamos aplicativos sob medida que organizam sua casa, eliminam o retrabalho e devolvem o tempo que sua equipe perde com tarefas repetitivas.</p><div class="hero-actions"><a class="button primary" href="#contato">Quero automatizar um processo</a><a class="button secondary" href="#solucoes">Ver exemplos reais</a></div></div>
         <figure class="hero-visual" aria-label="Ilustração de aplicativo de automação de processos da ALGroup">
-          <svg viewBox="0 0 720 520" role="img" aria-labelledby="heroTitle heroDesc">
-            <title id="heroTitle">Dashboard de automação de processos</title>
-            <desc id="heroDesc">Imagem vetorial mostrando pedidos, aprovações, agenda de marketing e indicadores conectados em um aplicativo sob medida.</desc>
-            <rect width="720" height="520" rx="28" fill="#f7faf8"/>
-            <rect x="52" y="54" width="616" height="370" rx="22" fill="#162421"/>
-            <rect x="84" y="88" width="198" height="270" rx="18" fill="#ffffff" opacity=".96"/>
-            <rect x="310" y="88" width="274" height="112" rx="18" fill="#0f7f78"/>
-            <rect x="310" y="226" width="124" height="132" rx="18" fill="#ffffff" opacity=".96"/>
-            <rect x="460" y="226" width="124" height="132" rx="18" fill="#ffffff" opacity=".96"/>
-            <circle cx="610" cy="144" r="42" fill="#c2872f" opacity=".95"/>
-            <path d="M598 144l9 9 18-24" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="112" y="120" width="86" height="12" rx="6" fill="#0f7f78"/>
-            <rect x="112" y="150" width="132" height="10" rx="5" fill="#dce5e1"/>
-            <rect x="112" y="178" width="104" height="10" rx="5" fill="#dce5e1"/>
-            <rect x="112" y="222" width="132" height="46" rx="12" fill="#edf4f0"/>
-            <rect x="112" y="286" width="96" height="46" rx="12" fill="#edf4f0"/>
-            <rect x="340" y="118" width="120" height="13" rx="6" fill="#ffffff" opacity=".9"/>
-            <rect x="340" y="150" width="182" height="10" rx="5" fill="#ffffff" opacity=".42"/>
-            <rect x="340" y="176" width="112" height="10" rx="5" fill="#ffffff" opacity=".42"/>
-            <path d="M282 220 C330 220 330 292 382 292" fill="none" stroke="#8dd7c6" stroke-width="5" stroke-linecap="round"/>
-            <path d="M434 292 C456 292 450 292 460 292" fill="none" stroke="#c2872f" stroke-width="5" stroke-linecap="round"/>
-            <circle cx="282" cy="220" r="9" fill="#8dd7c6"/>
-            <circle cx="434" cy="292" r="9" fill="#c2872f"/>
-            <rect x="334" y="258" width="58" height="10" rx="5" fill="#0f7f78"/>
-            <rect x="334" y="288" width="76" height="8" rx="4" fill="#dce5e1"/>
-            <rect x="334" y="314" width="54" height="8" rx="4" fill="#dce5e1"/>
-            <rect x="484" y="258" width="52" height="10" rx="5" fill="#0f7f78"/>
-            <rect x="484" y="288" width="74" height="8" rx="4" fill="#dce5e1"/>
-            <rect x="484" y="314" width="44" height="8" rx="4" fill="#dce5e1"/>
-            <rect x="130" y="438" width="460" height="28" rx="14" fill="#ffffff"/>
-            <rect x="158" y="448" width="210" height="8" rx="4" fill="#dce5e1"/>
-            <rect x="394" y="448" width="92" height="8" rx="4" fill="#5e9d67"/>
-          </svg>
+          <svg viewBox="0 0 720 520" role="img" aria-labelledby="heroTitle heroDesc"><title id="heroTitle">Dashboard de automação de processos</title><desc id="heroDesc">Imagem vetorial mostrando pedidos, aprovações, agenda de marketing e indicadores conectados em um aplicativo sob medida.</desc><rect width="720" height="520" rx="28" fill="#f7faf8"/><rect x="52" y="54" width="616" height="370" rx="22" fill="#162421"/><rect x="84" y="88" width="198" height="270" rx="18" fill="#ffffff" opacity=".96"/><rect x="310" y="88" width="274" height="112" rx="18" fill="#0f7f78"/><rect x="310" y="226" width="124" height="132" rx="18" fill="#ffffff" opacity=".96"/><rect x="460" y="226" width="124" height="132" rx="18" fill="#ffffff" opacity=".96"/><circle cx="610" cy="144" r="42" fill="#c2872f" opacity=".95"/><path d="M598 144l9 9 18-24" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><rect x="112" y="120" width="86" height="12" rx="6" fill="#0f7f78"/><rect x="112" y="150" width="132" height="10" rx="5" fill="#dce5e1"/><rect x="112" y="178" width="104" height="10" rx="5" fill="#dce5e1"/><rect x="112" y="222" width="132" height="46" rx="12" fill="#edf4f0"/><rect x="112" y="286" width="96" height="46" rx="12" fill="#edf4f0"/><rect x="340" y="118" width="120" height="13" rx="6" fill="#ffffff" opacity=".9"/><rect x="340" y="150" width="182" height="10" rx="5" fill="#ffffff" opacity=".42"/><rect x="340" y="176" width="112" height="10" rx="5" fill="#ffffff" opacity=".42"/><path d="M282 220 C330 220 330 292 382 292" fill="none" stroke="#8dd7c6" stroke-width="5" stroke-linecap="round"/><path d="M434 292 C456 292 450 292 460 292" fill="none" stroke="#c2872f" stroke-width="5" stroke-linecap="round"/><circle cx="282" cy="220" r="9" fill="#8dd7c6"/><circle cx="434" cy="292" r="9" fill="#c2872f"/><rect x="334" y="258" width="58" height="10" rx="5" fill="#0f7f78"/><rect x="334" y="288" width="76" height="8" rx="4" fill="#dce5e1"/><rect x="334" y="314" width="54" height="8" rx="4" fill="#dce5e1"/><rect x="484" y="258" width="52" height="10" rx="5" fill="#0f7f78"/><rect x="484" y="288" width="74" height="8" rx="4" fill="#dce5e1"/><rect x="484" y="314" width="44" height="8" rx="4" fill="#dce5e1"/><rect x="130" y="438" width="460" height="28" rx="14" fill="#ffffff"/><rect x="158" y="448" width="210" height="8" rx="4" fill="#dce5e1"/><rect x="394" y="448" width="92" height="8" rx="4" fill="#5e9d67"/></svg>
           <p class="visual-caption">Aplicativos sob medida para centralizar tarefas, pedidos, aprovações e indicadores em um só fluxo.</p>
         </figure>
       </section>
-
-      <section class="trust-strip" aria-label="Benefícios da automação de processos">
-        <div><strong>Automação sob medida</strong><span>Sistemas personalizados para o jeito real da sua operação.</span></div>
-        <div><strong>Menos retrabalho</strong><span>Dados fluem entre etapas, sem digitação duplicada.</span></div>
-        <div><strong>Mais controle</strong><span>Equipe, gestores e clientes enxergam o status em tempo real.</span></div>
-      </section>
-
-      <section class="comparison-section" aria-label="Antes e depois da automação">
-        <div class="section-heading">
-          <p class="eyebrow">A troca inteligente</p>
-          <h2>Do caos operacional para uma rotina com controle.</h2>
-        </div>
-        <div class="comparison-table">
-          <div class="comparison-row"><div class="comparison-cell before"><strong>Como é hoje: o caos</strong><p>Informação solta em mil conversas.</p></div><div class="comparison-cell after"><strong>Com a ALGroup: a ordem</strong><p>Centralização total em um só lugar.</p></div></div>
-          <div class="comparison-row"><div class="comparison-cell before"><strong>Retrabalho escondido</strong><p>Digitação duplicada e erro humano.</p></div><div class="comparison-cell after"><strong>Fluxos automáticos</strong><p>Dados fluidos que se movem sozinhos.</p></div></div>
-          <div class="comparison-row"><div class="comparison-cell before"><strong>Dúvida constante</strong><p>“Em que pé está esse pedido?”</p></div><div class="comparison-cell after"><strong>Clareza em tempo real</strong><p>Visibilidade imediata do status.</p></div></div>
-        </div>
-      </section>
-
-      <section class="section" id="solucoes">
-        <div class="section-heading">
-          <p class="eyebrow">Desenvolvimento de aplicativos sob medida</p>
-          <h2>Soluções criadas para o processo real da sua empresa.</h2>
-          <p>Não começamos pelo código. Começamos entendendo onde sua rotina trava, onde a equipe perde tempo e onde o processo precisa ganhar fluidez.</p>
-        </div>
-        <div class="solution-grid">
-          <article class="solution-card">
-            <svg class="card-visual" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="10" width="48" height="44" rx="8" fill="currentColor" opacity=".12"/><path d="M18 24h28M18 34h18M18 44h24" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="46" cy="34" r="5" fill="currentColor"/></svg>
-            <span>01</span><h3>Gestão de vendas sem atrito</h3><p>Centralize pedidos e aprovações. Saiba exatamente quem vendeu o quê e onde o processo travou, como em projetos de pedidos de venda para o setor de alimentos.</p>
-          </article>
-          <article class="solution-card">
-            <svg class="card-visual" viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="12" width="44" height="40" rx="8" fill="currentColor" opacity=".12"/><path d="M20 26h24M20 38h10" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M42 36l8 5-8 5z" fill="currentColor"/></svg>
-            <span>02</span><h3>Automação de marketing</h3><p>Menos tempo agendando posts, mais tempo criando estratégia. Organizamos o fluxo do briefing ao post finalizado.</p>
-          </article>
-          <article class="solution-card">
-            <svg class="card-visual" viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="13" width="46" height="38" rx="7" fill="currentColor" opacity=".12"/><path d="M18 23h28M18 32h28M18 41h28M28 18v28M38 18v28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-            <span>03</span><h3>Extermínio de planilhas</h3><p>Substituímos aquele controle paralelo que só uma pessoa entende por um sistema intuitivo que todo o time usa com prazer.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="split-section" id="automacao">
-        <div><p class="eyebrow">Software personalizado para empresas</p><h2>Você não está comprando um software. Está comprando a liberdade de focar no que realmente importa.</h2></div>
-        <div class="text-stack">
-          <p>Desenvolvemos ferramentas objetivas para eliminar a burocracia invisível que trava o seu lucro.</p>
-          <p>A ALGroup se posiciona como parceira de automação operacional: entendemos o processo, desenhamos o fluxo e criamos o app que transforma trabalho manual em rotina organizada.</p>
-        </div>
-      </section>
-
-      <section class="seo-section">
-        <div class="section-heading">
-          <p class="eyebrow">Onde a automação gera resultado</p>
-          <h2>Aplicativos para vendas, marketing e processos internos.</h2>
-          <p>Se sua empresa ainda depende de planilhas, formulários soltos, mensagens de WhatsApp e conferências manuais, existe espaço para automação.</p>
-        </div>
-        <div class="seo-grid">
-          <article class="seo-card"><h3>App de pedidos de venda</h3><p>Controle pedidos, clientes, produtos, aprovações, entregas e status em uma única plataforma.</p></article>
-          <article class="seo-card"><h3>Sistema de automação de marketing</h3><p>Organize briefing, criação, aprovação e publicação de conteúdo com menos cobranças manuais.</p></article>
-          <article class="seo-card"><h3>Automação de processos internos</h3><p>Crie fluxos digitais para tarefas repetitivas, aprovações, cadastros, relatórios e acompanhamento operacional.</p></article>
-        </div>
-      </section>
-
-      <section class="section muted" id="metodo">
-        <div class="section-heading"><p class="eyebrow">Método sem mistério</p><h2>Da imersão operacional ao app em evolução.</h2></div>
-        <div class="steps">
-          <div><span>1</span><h3>Imersão operacional</h3><p>Não apenas ouvimos; nós caçamos onde seu tempo está sendo desperdiçado.</p></div>
-          <div><span>2</span><h3>Arquitetura do fluxo</h3><p>Desenhamos a lógica ideal. Antes do código, garantimos que o processo faz sentido.</p></div>
-          <div><span>3</span><h3>Desenvolvimento ágil</h3><p>Entregamos uma ferramenta limpa, intuitiva e sem funções inúteis que ninguém usa.</p></div>
-          <div><span>4</span><h3>Suporte evolutivo</h3><p>Seu processo mudou? O app muda com você. Estamos juntos na evolução da sua rotina.</p></div>
-        </div>
-      </section>
-
-      <section class="faq-section" aria-label="Perguntas frequentes sobre automação de processos">
-        <div class="section-heading"><p class="eyebrow">Perguntas frequentes</p><h2>O que empresas perguntam antes de automatizar.</h2></div>
-        <div class="faq-grid">
-          <article class="faq-item"><h3>O que é automação de processos?</h3><p>É transformar tarefas manuais e repetitivas em fluxos digitais com regras, responsáveis, status e informações centralizadas.</p></article>
-          <article class="faq-item"><h3>Preciso trocar todos os sistemas da empresa?</h3><p>Não. A ALGroup cria aplicativos sob medida para resolver gargalos específicos e evoluir conforme a operação precisa.</p></article>
-          <article class="faq-item"><h3>Um app sob medida serve para pequenas empresas?</h3><p>Sim. Quando há retrabalho, perda de informação ou controle manual demais, um app objetivo pode trazer ganho rápido.</p></article>
-          <article class="faq-item"><h3>Como começo?</h3><p>Conte como sua rotina funciona hoje. A partir disso, mapeamos gargalos e desenhamos uma solução prática.</p></article>
-        </div>
-      </section>
-
-      <section class="cta-section" id="contato">
-        <div>
-          <p class="eyebrow">Próximo passo</p>
-          <h2>Sua equipe está exausta de processos manuais?</h2>
-          <p>Não deixe sua operação depender da memória ou de planilhas frágeis. Conte-nos como sua rotina funciona hoje e nós desenhamos a solução.</p>
-        </div>
-        <a class="button primary dark" href="https://wa.me/5514981283373?text=Olá%2C%20quero%20automatizar%20um%20processo%20da%20minha%20empresa%20com%20a%20ALGroup." target="_blank" rel="noopener">Falar com um especialista da ALGroup</a>
-      </section>
+      <section class="trust-strip" aria-label="Benefícios da automação de processos"><div><strong>Automação sob medida</strong><span>Sistemas personalizados para o jeito real da sua operação.</span></div><div><strong>Menos retrabalho</strong><span>Dados fluem entre etapas, sem digitação duplicada.</span></div><div><strong>Mais controle</strong><span>Equipe, gestores e clientes enxergam o status em tempo real.</span></div></section>
+      <section class="comparison-section" aria-label="Antes e depois da automação"><div class="section-heading"><p class="eyebrow">A troca inteligente</p><h2>Do caos operacional para uma rotina com controle.</h2></div><div class="comparison-table"><div class="comparison-row"><div class="comparison-cell before"><strong>Como é hoje: o caos</strong><p>Informação solta em mil conversas.</p></div><div class="comparison-cell after"><strong>Com a ALGroup: a ordem</strong><p>Centralização total em um só lugar.</p></div></div><div class="comparison-row"><div class="comparison-cell before"><strong>Retrabalho escondido</strong><p>Digitação duplicada e erro humano.</p></div><div class="comparison-cell after"><strong>Fluxos automáticos</strong><p>Dados fluidos que se movem sozinhos.</p></div></div><div class="comparison-row"><div class="comparison-cell before"><strong>Dúvida constante</strong><p>“Em que pé está esse pedido?”</p></div><div class="comparison-cell after"><strong>Clareza em tempo real</strong><p>Visibilidade imediata do status.</p></div></div></div></section>
+      <section class="section" id="solucoes"><div class="section-heading"><p class="eyebrow">Desenvolvimento de aplicativos sob medida</p><h2>Soluções criadas para o processo real da sua empresa.</h2><p>Não começamos pelo código. Começamos entendendo onde sua rotina trava, onde a equipe perde tempo e onde o processo precisa ganhar fluidez.</p></div><div class="solution-grid"><article class="solution-card"><svg class="card-visual" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="10" width="48" height="44" rx="8" fill="currentColor" opacity=".12"/><path d="M18 24h28M18 34h18M18 44h24" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="46" cy="34" r="5" fill="currentColor"/></svg><span>01</span><h3>Gestão de vendas sem atrito</h3><p>Centralize pedidos e aprovações. Saiba exatamente quem vendeu o quê e onde o processo travou, como em projetos de pedidos de venda para o setor de alimentos.</p></article><article class="solution-card"><svg class="card-visual" viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="12" width="44" height="40" rx="8" fill="currentColor" opacity=".12"/><path d="M20 26h24M20 38h10" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M42 36l8 5-8 5z" fill="currentColor"/></svg><span>02</span><h3>Automação de marketing</h3><p>Menos tempo agendando posts, mais tempo criando estratégia. Organizamos o fluxo do briefing ao post finalizado.</p></article><article class="solution-card"><svg class="card-visual" viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="13" width="46" height="38" rx="7" fill="currentColor" opacity=".12"/><path d="M18 23h28M18 32h28M18 41h28M28 18v28M38 18v28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span>03</span><h3>Extermínio de planilhas</h3><p>Substituímos aquele controle paralelo que só uma pessoa entende por um sistema intuitivo que todo o time usa com prazer.</p></article></div></section>
+      <section class="split-section" id="automacao"><div><p class="eyebrow">Software personalizado para empresas</p><h2>Você não está comprando um software. Está comprando a liberdade de focar no que realmente importa.</h2></div><div class="text-stack"><p>Desenvolvemos ferramentas objetivas para eliminar a burocracia invisível que trava o seu lucro.</p><p>A ALGroup se posiciona como parceira de automação operacional: entendemos o processo, desenhamos o fluxo e criamos o app que transforma trabalho manual em rotina organizada.</p></div></section>
+      <section class="seo-section"><div class="section-heading"><p class="eyebrow">Onde a automação gera resultado</p><h2>Aplicativos para vendas, marketing e processos internos.</h2><p>Se sua empresa ainda depende de planilhas, formulários soltos, mensagens de WhatsApp e conferências manuais, existe espaço para automação.</p></div><div class="seo-grid"><article class="seo-card"><h3>App de pedidos de venda</h3><p>Controle pedidos, clientes, produtos, aprovações, entregas e status em uma única plataforma.</p></article><article class="seo-card"><h3>Sistema de automação de marketing</h3><p>Organize briefing, criação, aprovação e publicação de conteúdo com menos cobranças manuais.</p></article><article class="seo-card"><h3>Automação de processos internos</h3><p>Crie fluxos digitais para tarefas repetitivas, aprovações, cadastros, relatórios e acompanhamento operacional.</p></article></div></section>
+      <section class="section muted" id="metodo"><div class="section-heading"><p class="eyebrow">Método sem mistério</p><h2>Da imersão operacional ao app em evolução.</h2></div><div class="steps"><div><span>1</span><h3>Imersão operacional</h3><p>Não apenas ouvimos; nós caçamos onde seu tempo está sendo desperdiçado.</p></div><div><span>2</span><h3>Arquitetura do fluxo</h3><p>Desenhamos a lógica ideal. Antes do código, garantimos que o processo faz sentido.</p></div><div><span>3</span><h3>Desenvolvimento ágil</h3><p>Entregamos uma ferramenta limpa, intuitiva e sem funções inúteis que ninguém usa.</p></div><div><span>4</span><h3>Suporte evolutivo</h3><p>Seu processo mudou? O app muda com você. Estamos juntos na evolução da sua rotina.</p></div></div></section>
+      <section class="faq-section" aria-label="Perguntas frequentes sobre automação de processos"><div class="section-heading"><p class="eyebrow">Perguntas frequentes</p><h2>O que empresas perguntam antes de automatizar.</h2></div><div class="faq-grid"><article class="faq-item"><h3>O que é automação de processos?</h3><p>É transformar tarefas manuais e repetitivas em fluxos digitais com regras, responsáveis, status e informações centralizadas.</p></article><article class="faq-item"><h3>Preciso trocar todos os sistemas da empresa?</h3><p>Não. A ALGroup cria aplicativos sob medida para resolver gargalos específicos e evoluir conforme a operação precisa.</p></article><article class="faq-item"><h3>Um app sob medida serve para pequenas empresas?</h3><p>Sim. Quando há retrabalho, perda de informação ou controle manual demais, um app objetivo pode trazer ganho rápido.</p></article><article class="faq-item"><h3>Como começo?</h3><p>Conte como sua rotina funciona hoje. A partir disso, mapeamos gargalos e desenhamos uma solução prática.</p></article></div></section>
+      <section class="cta-section" id="contato"><div><p class="eyebrow">Próximo passo</p><h2>Sua equipe está exausta de processos manuais?</h2><p>Não deixe sua operação depender da memória ou de planilhas frágeis. Conte-nos como sua rotina funciona hoje e nós desenhamos a solução.</p></div><a class="button primary dark" href="https://wa.me/5514981283373?text=Olá%2C%20quero%20automatizar%20um%20processo%20da%20minha%20empresa%20com%20a%20ALGroup." target="_blank" rel="noopener">Falar com um especialista da ALGroup</a></section>
     </main>
+    <footer class="site-footer">ALGroup todos os direitos reservados</footer>
   </body>
 </html>
